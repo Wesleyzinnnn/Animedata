@@ -12,7 +12,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <BrowserRouter>
       <Routes>
         <Route element={<App />}>
-          <Route path="/" element={<Homepage />} />
+          <Route path="/Animedata" element={<Homepage />} />
           <Route path="search" element={<Searchpage />} />
           <Route path="anime/:mal_id" element={<Anime />} />
         </Route>
