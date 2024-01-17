@@ -18,7 +18,7 @@ function Navbar() {
   return (
     <nav className="bg-black text-white flex justify-between p-3 items-center">
       <h2>
-        <Link to="/">
+        <Link to="/Animedata">
           <h1 className="text-xl text-red-700 font-bold w-full ">AnimeData</h1>
         </Link>
       </h2>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Anime = () => {
   const { mal_id } = useParams();
@@ -41,8 +42,13 @@ const Anime = () => {
 
   return (
     <div>
-      <div className="p-3 bg-white border-b-2">
+      <div className="p-3 bg-white border-b-2 flex justify-between">
         <p className="text-xl font-bold">{anime.title}</p>
+        <Link to="/Animedata">
+          <button className="bg-red-600 pr-3 pl-3 rounded-md text-white">
+            Voltar
+          </button>
+        </Link>
       </div>
       <div className="flex ">
         <div className="bg-white w-1/3 p-1">
@@ -93,7 +99,7 @@ const Anime = () => {
             <p>Popularidade: {anime.popularity}</p>
           </div>
         </div>
-        <div className=" bg-white w-screen p-2 border-l-2">
+        <div className=" bg-white w-2/3 p-2 border-l-2">
           <div>
             <h1 className="font-bold text-lg border-b-2">Sinopse</h1>
             <p>{anime.synopsis}</p>
